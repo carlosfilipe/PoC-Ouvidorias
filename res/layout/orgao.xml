@@ -58,7 +58,8 @@
                 android:layout_below="@+id/avalieAtendimentoTextViewA"
                 android:layout_centerHorizontal="true"
                 android:numStars="5"
-                android:stepSize="1.0" />
+                android:stepSize="1.0" 
+                />
 
             <View
                 android:id="@+id/rule"

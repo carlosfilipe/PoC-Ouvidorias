@@ -23,6 +23,9 @@ public class OpniaoOrgaoActivity extends ActionBarActivity {
 
 		getSupportActionBar().setHomeButtonEnabled(true);
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+		
+		RatingBar ratingBar = (RatingBar) findViewById(R.id.ratingBar1);
+		ratingBar.setRating(getIntent().getExtras().getFloat("ratingOld"));
 
 	}
 

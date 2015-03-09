@@ -34,7 +34,7 @@
         android:layout_toRightOf="@+id/textView2"
         android:scaleX="0.7"
         android:scaleY="0.7" 
-        android:rating="4.0"/>
+        android:stepSize="1.0"/>
 
     <TextView
         android:id="@+id/textView3"
