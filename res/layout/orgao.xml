@@ -37,7 +37,8 @@
                 android:layout_width="fill_parent"
                 android:layout_height="2dip"
                 android:layout_below="@+id/textView1"
-                layout="@layout/horizontal_line" />
+                layout="@layout/horizontal_line"
+                 />
 
             <TextView
                 android:id="@+id/avalieAtendimentoTextViewA"
@@ -85,7 +86,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/notaMedia"
-                layout="@layout/comment_template" />
+                layout="@layout/comment_template"
+                android:clickable="true" />
 
             <include
                 android:id="@+id/coment1"

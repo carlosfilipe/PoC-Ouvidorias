@@ -33,9 +33,8 @@ public class LocaisProximosActivity extends Activity implements android.widget.A
 
 	public void populateList() {
 		list = (ListView) findViewById(R.id.listproximos);
-		ArrayAdapter adapter = new ArrayAdapter(this,
-				android.R.layout.simple_list_item_1, orgaosProximos);
-		list.setAdapter(adapter);
+		
+		list.setAdapter(new ListAdapter(this));
 	}
 
 	@Override
