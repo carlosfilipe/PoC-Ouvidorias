@@ -7,13 +7,15 @@ import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.RatingBar;
-import android.widget.RatingBar.OnRatingBarChangeListener;
 
-public class OpniaoOrgaoActivity extends ActionBarActivity {
+public class OpniaoOrgaoActivity extends ActionBarActivity implements OnClickListener{
 
 	private Toolbar toolbar;
-
+Button salvar;
 	RatingBar ratingBar;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +29,9 @@ public class OpniaoOrgaoActivity extends ActionBarActivity {
 		RatingBar ratingBar = (RatingBar) findViewById(R.id.ratingBar1);
 		ratingBar.setRating(getIntent().getExtras().getFloat("ratingOld"));
 
+		
+		salvar = (Button) findViewById(R.id.button1);
+		salvar.setOnClickListener(this);
 	}
 
 	@Override
@@ -52,6 +57,14 @@ public class OpniaoOrgaoActivity extends ActionBarActivity {
 			NavUtils.navigateUpFromSameTask(this);
 		}
 		return super.onOptionsItemSelected(item);
+	}
+
+	@Override
+	public void onClick(View arg0) {
+		// TODO Auto-generated method stub
+		
+		startActivity(new Intent(this,ObrigadoActivity.class ));
+		
 	}
 
 }
