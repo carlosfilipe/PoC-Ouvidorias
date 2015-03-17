@@ -51,7 +51,8 @@
         </activity>
         <activity
             android:name=".OpniaoOrgaoActivity"
-            android:label="Avaliar Atendimento em" >
+            android:label="Avaliar Atendimento em"
+            android:windowSoftInputMode="stateHidden" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".OrgaoActivity" />
