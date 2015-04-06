@@ -50,7 +50,7 @@
                 android:value=".MainActivity" />
         </activity>
         <activity
-            android:name=".OpniaoOrgaoActivity"
+            android:name=".OpiniaoOrgaoActivity"
             android:label="Avaliar Atendimento em"
             android:windowSoftInputMode="stateHidden" >
             <meta-data

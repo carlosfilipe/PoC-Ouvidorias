@@ -66,7 +66,7 @@ public class OrgaoActivity extends ActionBarActivity implements OnRatingBarChang
 
 	@Override
 	public void onRatingChanged(RatingBar arg0, float arg1, boolean arg2) {
-		Intent intent  = new Intent(this,OpniaoOrgaoActivity.class);
+		Intent intent  = new Intent(this,OpiniaoOrgaoActivity.class);
 		
 		intent.putExtra("ratingOld",ratingBar.getRating());
 		startActivity(intent);

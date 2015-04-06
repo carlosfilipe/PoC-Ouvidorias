@@ -12,11 +12,13 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.RatingBar;
 
-public class OpniaoOrgaoActivity extends ActionBarActivity implements OnClickListener{
+public class OpiniaoOrgaoActivity extends ActionBarActivity implements
+		OnClickListener {
 
 	private Toolbar toolbar;
-Button salvar;
+	Button salvar;
 	RatingBar ratingBar;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -25,11 +27,10 @@ Button salvar;
 
 		getSupportActionBar().setHomeButtonEnabled(true);
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-		
-		RatingBar ratingBar = (RatingBar) findViewById(R.id.ratingBar1);
-		ratingBar.setRating(getIntent().getExtras().getFloat("ratingOld"));
 
-		
+		RatingBar ratingBar = (RatingBar) findViewById(R.id.ratingBar1);
+		// ratingBar.setRating(getIntent().getExtras().getFloat("ratingOld"));
+
 		salvar = (Button) findViewById(R.id.button1);
 		salvar.setOnClickListener(this);
 	}
@@ -41,8 +42,6 @@ Button salvar;
 		return true;
 	}
 
-
-	
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// Handle action bar item clicks here. The action bar will
@@ -62,9 +61,10 @@ Button salvar;
 	@Override
 	public void onClick(View arg0) {
 		// TODO Auto-generated method stub
-		
-		startActivity(new Intent(this,ObrigadoActivity.class ));
-		
+
+		startActivity(new Intent(this, ObrigadoActivity.class));
+		finish();
+
 	}
 
 }

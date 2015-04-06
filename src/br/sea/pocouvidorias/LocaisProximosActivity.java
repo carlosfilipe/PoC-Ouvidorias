@@ -40,7 +40,7 @@ public class LocaisProximosActivity extends Activity implements android.widget.A
 	@Override
 	public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,long arg3) {
 
-		startActivity(new Intent(this,OrgaoActivity.class ));
+		startActivity(new Intent(this,OpiniaoOrgaoActivity.class ));
 	}
 
 
