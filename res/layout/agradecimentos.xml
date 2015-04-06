@@ -60,4 +60,22 @@
          android:src="@drawable/googleplus"
          android:padding="5dp" />
 
+     <Button
+         android:id="@+id/finalizarButton"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentBottom="true"
+         android:layout_alignRight="@+id/imageView3"
+         android:layout_marginBottom="20dp"
+         android:text="Finalizar" />
+
+     <Button
+         android:id="@+id/verReputacaoButton"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignBaseline="@+id/finalizarButton"
+         android:layout_alignBottom="@+id/finalizarButton"
+         android:layout_alignLeft="@+id/imageView1"
+         android:text="Ver TCU" />
+
 </RelativeLayout>
