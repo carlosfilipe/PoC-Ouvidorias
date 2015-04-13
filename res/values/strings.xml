@@ -28,7 +28,21 @@
         <item>Carlos</item>
         <item>Gustavo</item>
         <item>Dnaiel</item>
-        <item>ROberto</item>
+        <item>Roberto</item>
     </string-array>
+    
+    <string-array name="siglaOrgaos" >
+        <item>TCU</item>
+        <item>STF</item>
+        <item>BB</item>
+    </string-array>
+    
+    <string-array name="nomeOrgaos" >
+        <item>Tribunal de Contas da União</item>
+        <item>Supremo Tribunal Federal</item>
+        <item>Banco do Brasil</item>
+    </string-array>
+    
+    
 
 </resources>

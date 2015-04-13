@@ -6,10 +6,12 @@
 
     <ImageView
         android:id="@+id/imageView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        
         android:src="@drawable/tcu_imagem" 
-        android:layout_margin="5dp"/>
+        android:layout_margin="5dp"
+        />
 
     <TextView
         android:id="@+id/textView1"

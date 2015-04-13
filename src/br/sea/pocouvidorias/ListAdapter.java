@@ -20,9 +20,20 @@ public class ListAdapter extends BaseAdapter {
 		this.context = c;
 		list = new ArrayList<ListElement>();
 		
-		for (int i = 0; i < 5; i++) {
-			list.add(new ListElement("TCU", "Tribunal de Contas da União",
-					R.drawable.tcu_imagem));
+		String [] siglaOrgao  = c.getResources().getStringArray(R.array.siglaOrgaos);
+		String [] nomeOrgao  = c.getResources().getStringArray(R.array.nomeOrgaos);
+		int[] images = {R.drawable.tcu_imagem,R.drawable.stf_imagem};
+	
+		
+		for (int i = 0; i < nomeOrgao.length; i++) {
+			int image;
+			try{
+			 image= images[i];
+			}catch (Exception e){
+				image = R.drawable.tcu_imagem;
+			}
+			list.add(new ListElement(siglaOrgao[i], nomeOrgao[i],
+					image));
 
 		}
 
