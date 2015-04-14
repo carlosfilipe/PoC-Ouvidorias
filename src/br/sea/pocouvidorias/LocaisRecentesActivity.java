@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 public class LocaisRecentesActivity extends Activity implements android.widget.AdapterView.OnItemClickListener{
 	ListView list;
@@ -27,8 +28,13 @@ public class LocaisRecentesActivity extends Activity implements android.widget.A
 
 	@Override
 	public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,long arg3) {
-
-		startActivity(new Intent(this,OpiniaoOrgaoActivity.class ));
+		Intent intent =new Intent(this,OpiniaoOrgaoActivity.class );
+		
+		View row = findViewById((int) arg3);
+		
+		TextView sigla= (TextView) row.findViewById(R.id.textView1);
+		intent.putExtra("siglaOrgao", sigla.getText().toString());
+		startActivity(intent);
 	}
 
 

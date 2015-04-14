@@ -1,5 +1,6 @@
 package br.sea.pocouvidorias;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
@@ -11,6 +12,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.RatingBar;
+import android.widget.TextView;
 
 public class OpiniaoOrgaoActivity extends ActionBarActivity implements
 		OnClickListener {
@@ -18,7 +20,9 @@ public class OpiniaoOrgaoActivity extends ActionBarActivity implements
 	private Toolbar toolbar;
 	Button salvar;
 	RatingBar ratingBar;
+	TextView sigla;
 
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -30,6 +34,8 @@ public class OpiniaoOrgaoActivity extends ActionBarActivity implements
 
 		RatingBar ratingBar = (RatingBar) findViewById(R.id.ratingBar1);
 		// ratingBar.setRating(getIntent().getExtras().getFloat("ratingOld"));
+		sigla = (TextView) findViewById(R.id.textView1);
+		sigla.setText("TCU");
 
 		salvar = (Button) findViewById(R.id.button1);
 		salvar.setOnClickListener(this);
