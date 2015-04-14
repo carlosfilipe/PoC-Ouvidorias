@@ -16,7 +16,7 @@ import android.view.View.OnTouchListener;
 import android.widget.RatingBar;
 import android.widget.RatingBar.OnRatingBarChangeListener;
 
-public class OrgaoActivity extends ActionBarActivity implements OnRatingBarChangeListener, OnTouchListener{
+public class OrgaoActivity extends ActionBarActivity implements  OnTouchListener{
 	
 	 private Toolbar toolbar;
 	 RatingBar ratingBar;
@@ -33,7 +33,7 @@ public class OrgaoActivity extends ActionBarActivity implements OnRatingBarChang
 		getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 		
 		ratingBar = (RatingBar) findViewById(R.id.ratingBar1);
-		ratingBar.setOnRatingBarChangeListener(this);
+		
 
 	
 	}
@@ -64,14 +64,7 @@ public class OrgaoActivity extends ActionBarActivity implements OnRatingBarChang
 		return super.onOptionsItemSelected(item);
 	}
 
-	@Override
-	public void onRatingChanged(RatingBar arg0, float arg1, boolean arg2) {
-		Intent intent  = new Intent(this,OpiniaoOrgaoActivity.class);
-		
-		intent.putExtra("ratingOld",ratingBar.getRating());
-		startActivity(intent);
-		
-	}
+
 
 	
 
