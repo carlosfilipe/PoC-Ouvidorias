@@ -19,6 +19,7 @@ public class ObrigadoActivity extends Activity implements OnClickListener{
 		setContentView(R.layout.agradecimentos);
 		
 		verOrgaoButton = (Button) findViewById(R.id.verReputacaoButton);
+		verOrgaoButton.setText(getIntent().getExtras().getString("siglaOrgao"));
 		verOrgaoButton.setOnClickListener(this);
 	
 		finalizarButton = (Button) findViewById(R.id.finalizarButton);
@@ -37,7 +38,13 @@ public class ObrigadoActivity extends Activity implements OnClickListener{
 		if (id== R.id.finalizarButton)
 			finish();
 		else{
-			startActivity(new Intent(this, OrgaoActivity.class));
+			
+			Intent  intent = new Intent(this, OrgaoActivity.class);
+			
+			intent.putExtra("siglaOrgao",getIntent().getExtras().getString("siglaOrgao"));
+			intent.putExtra("nomeOrgao",getIntent().getExtras().getString("nomeOrgao"));
+			intent.putExtra("imagemOrgao",getIntent().getExtras().getInt("imagemOrgao"));
+			startActivity(intent);
 			finish();
 		}
 		

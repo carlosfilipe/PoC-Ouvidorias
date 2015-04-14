@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -30,10 +31,14 @@ public class LocaisRecentesActivity extends Activity implements android.widget.A
 	public void onItemClick(AdapterView<?> arg0, View arg1, int arg2,long arg3) {
 		Intent intent =new Intent(this,OpiniaoOrgaoActivity.class );
 		
-		View row = findViewById((int) arg3);
+		//View row = findViewById((int) arg3);
 		
-		TextView sigla= (TextView) row.findViewById(R.id.textView1);
-		intent.putExtra("siglaOrgao", sigla.getText().toString());
+		TextView sigla= (TextView) arg1.findViewById(R.id.textView1);
+		TextView nomeOrgao = (TextView) arg1.findViewById(R.id.textView2);
+		ImageView imagem = (ImageView) arg1.findViewById(R.id.imageView1);
+		intent.putExtra("siglaOrgao",sigla.getText());
+		intent.putExtra("nomeOrgao",nomeOrgao.getText());
+		intent.putExtra("imagemOrgao",arg2);
 		startActivity(intent);
 	}
 

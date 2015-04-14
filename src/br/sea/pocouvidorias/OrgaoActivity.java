@@ -1,7 +1,5 @@
 package br.sea.pocouvidorias;
 
-import android.app.Activity;
-import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
@@ -11,10 +9,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.View.OnTouchListener;
+import android.widget.ImageView;
 import android.widget.RatingBar;
-import android.widget.RatingBar.OnRatingBarChangeListener;
+import android.widget.TextView;
 
 public class OrgaoActivity extends ActionBarActivity implements  OnTouchListener{
 	
@@ -22,6 +20,11 @@ public class OrgaoActivity extends ActionBarActivity implements  OnTouchListener
 	 RatingBar ratingBar;
 	 View view;
 	
+	 TextView nomeOrgao;
+	 TextView siglaOrgao;
+	 ImageView imagemOrgao;
+	 
+	 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -34,7 +37,21 @@ public class OrgaoActivity extends ActionBarActivity implements  OnTouchListener
 		
 		ratingBar = (RatingBar) findViewById(R.id.ratingBar1);
 		
-
+		nomeOrgao = (TextView) findViewById(R.id.textView1);
+		nomeOrgao.setText(getIntent().getExtras().getString("nomeOrgao"));
+		siglaOrgao = (TextView) findViewById(R.id.textView2);
+		siglaOrgao.setText(getIntent().getExtras().getString("siglaOrgao"));
+		
+		imagemOrgao = (ImageView) findViewById(R.id.imageView1);
+		
+		int indexImage = getIntent().getExtras().getInt("imagemOrgao");
+		
+		
+		try{
+		imagemOrgao.setImageResource(ListAdapter.images[indexImage]);
+		}catch(Exception e){
+			imagemOrgao.setImageResource(R.drawable.tcuimagem);
+		}
 	
 	}
 	

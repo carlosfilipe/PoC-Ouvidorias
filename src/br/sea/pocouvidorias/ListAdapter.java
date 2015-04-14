@@ -15,6 +15,7 @@ public class ListAdapter extends BaseAdapter {
 
 	ArrayList<ListElement> list;
 	Context context;	
+	static  int[] images = {R.drawable.tcuimagem,R.drawable.stf_imagem};
 	public ListAdapter(Context c) {
 		
 		this.context = c;
@@ -22,7 +23,7 @@ public class ListAdapter extends BaseAdapter {
 		
 		String [] siglaOrgao  = c.getResources().getStringArray(R.array.siglaOrgaos);
 		String [] nomeOrgao  = c.getResources().getStringArray(R.array.nomeOrgaos);
-		int[] images = {R.drawable.tcu_imagem,R.drawable.stf_imagem};
+		
 	
 		
 		for (int i = 0; i < nomeOrgao.length; i++) {

@@ -21,6 +21,7 @@ public class OpiniaoOrgaoActivity extends ActionBarActivity implements
 	Button salvar;
 	RatingBar ratingBar;
 	TextView sigla;
+	TextView nomeOrgao;
 
 	
 	@Override
@@ -34,9 +35,13 @@ public class OpiniaoOrgaoActivity extends ActionBarActivity implements
 
 		RatingBar ratingBar = (RatingBar) findViewById(R.id.ratingBar1);
 		// ratingBar.setRating(getIntent().getExtras().getFloat("ratingOld"));
-		sigla = (TextView) findViewById(R.id.textView1);
-		sigla.setText("TCU");
+		sigla = (TextView) findViewById(R.id.siglaOrgaoTextView);
+		sigla.setText(getIntent().getExtras().getString("siglaOrgao"));
 
+		
+		nomeOrgao = (TextView) findViewById(R.id.nomeOrgaoTextView);
+		nomeOrgao.setText(getIntent().getExtras().getString("nomeOrgao"));
+		
 		salvar = (Button) findViewById(R.id.button1);
 		salvar.setOnClickListener(this);
 	}
@@ -68,7 +73,11 @@ public class OpiniaoOrgaoActivity extends ActionBarActivity implements
 	public void onClick(View arg0) {
 		// TODO Auto-generated method stub
 
-		startActivity(new Intent(this, ObrigadoActivity.class));
+		Intent intent=new Intent(this, ObrigadoActivity.class);
+		intent.putExtra("siglaOrgao",sigla.getText());
+		intent.putExtra("nomeOrgao",nomeOrgao.getText());
+		intent.putExtra("imagemOrgao",getIntent().getExtras().getInt("imagemOrgao"));
+		startActivity(intent);
 		finish();
 
 	}

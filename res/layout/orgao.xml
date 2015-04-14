@@ -40,18 +40,6 @@
                 layout="@layout/horizontal_line"
                  />
 
-            <TextView
-                android:id="@+id/avalieAtendimentoTextViewA"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBaseline="@+id/textView3"
-                android:layout_alignBottom="@+id/textView3"
-                android:layout_below="@+id/line1"
-                android:layout_centerHorizontal="true"
-                android:layout_toRightOf="@+id/textView3"
-                android:text="Nota Geral de Satisfação com o TCU"
-                android:textSize="15dp" />
-
             <RatingBar
                 android:id="@+id/ratingBar1"
                 android:layout_width="wrap_content"
@@ -113,6 +101,24 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/coment2"
                 layout="@layout/comment_template" />
+
+            <TextView
+                android:id="@+id/avalieAtendimentoTextViewA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView1"
+                android:layout_below="@+id/line1"
+                android:text="Nota Geral de Satisfação com o "
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/ratingBar1"
+                android:layout_toRightOf="@+id/avalieAtendimentoTextViewA"
+                android:text="TCU" />
+
         </RelativeLayout>
     </ScrollView>
 
